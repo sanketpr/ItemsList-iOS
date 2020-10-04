@@ -6,4 +6,5 @@ protocol ItemBaseViewModel {
     var name: String { get }
 
     init(item: Item)
+    func getNameText() -> String
 }

@@ -9,5 +9,8 @@ class ItemCellViewModel: ItemBaseViewModel {
         self.name = item.name!
     }
     
-    
+    /// Return the `name` for cell view textlabel
+    func getNameText() -> String {
+        return self.name
+    }
 }

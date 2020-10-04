@@ -8,18 +8,17 @@
 
 #### Design Choice:
 
-- I initially approached this task with MVC architecture because
+- Initially I tried to approached this task with MVC architecture because
 	1. This would give me three entities with dedicated responsiblities
-	2. Since the application was not too large, MVC would keep things relatively simpler
-	3. Also it was easy to implement
-- However there are some drawback of using this architecture, for instance there is strong couping of functionalities.
+	2. Since the application was not too large, MVC be easy to implement and would keep things relatively simpler for now
+- However there are some drawback of using this architecture, like there would be couping of functionalities. This won't be good when scaling the application.
 - View controller would have more than one responsiblities,
 	1. Being responsilbe for presenting the list of items.
 	2. Managing data conversion and data flow between model and view
-  This does not confirm to Single Responsiblity Principle and especially View Controller would become a bit more complex.
-- Also because of this the ViewController can get flooded with different functionalities and therefore becomes difficult to test
-- Even though MVVM can be thought of as too much for this assignment, but because of MVVM each class has one responsiblities and there is proper seperation of concern.
-- Because of this quality the classes will be smaller in size and also would be easy to test
+  This does not confirm to Single Responsiblity Principle and View Controller would become a bit more complex.
+- And because of this the ViewController would become relatively difficult to test
+- With MVVM approach each class has one responsiblity and there is proper seperation of concern, which confirms to Single Responsiblity Principle.
+- Because of this the classes will be smaller in size and also would be easy to test
 - Also using this architecture gives us more flexiblity to substitute components which is good for scaling the application.
 - Morover while implementing I enforced the use of Protocols in places to ensures that the classes are open to extension without the need to modify them, conforming to Open-Closed Principle
 - At any point if there is any need to add more functionality we can simply provide a new implementation because of which

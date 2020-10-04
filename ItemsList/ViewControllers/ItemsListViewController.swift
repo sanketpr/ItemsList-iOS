@@ -32,10 +32,11 @@ class ItemsListViewController: UIViewController, UITableViewDelegate {
         }
     }
 
-    
+    /// Adding a table view to the view and setting it's constraints to match
     private func setupTableView() {
         view.addSubview(tableView)
 
+        // TODO: Remove the safe area constraint. The issue with the clipped view seems to be iOS 14 specific
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -46,30 +47,31 @@ class ItemsListViewController: UIViewController, UITableViewDelegate {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
-        
-        
     }
 }
 
+/// UITableView DataSource Methods
 extension ItemsListViewController: UITableViewDataSource {
 
+    // Deselect the selected cell with animation on
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    // Determine the number of sections/categories we have in the datasource
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataSourceControllerDelegate.getNumberOfSections()
     }
 
+    // Determine the number of rows in a particular section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSourceControllerDelegate.getNumberOfRows(for: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
-        let name = dataSourceControllerDelegate.getViewModel(for: indexPath.section, at: indexPath.row).name
-
-        cell.textLabel?.text = name
+        let viewModel = dataSourceControllerDelegate.getViewModel(for: indexPath.section, at: indexPath.row)
+        cell.textLabel?.text = viewModel.getNameText()
         cell.backgroundColor = dataSourceControllerDelegate.getBackgroundColor(for: indexPath.section)
         return cell
     }

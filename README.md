@@ -15,15 +15,16 @@
 - View controller would have more than one responsiblities,
 	1. Being responsilbe for presenting the list of items.
 	2. Managing data conversion and data flow between model and view
-  This does not confirm to Single Responsiblity Principle and View Controller would become a bit more complex.
+  This does not conform to Single Responsiblity Principle and View Controller would become a bit more complex.
 - And because of this the ViewController would become relatively difficult to test
-- With MVVM approach each class has one responsiblity and there is proper seperation of concern, which confirms to Single Responsiblity Principle.
-- Because of this the classes will be smaller in size and also would be easy to test
-- Also using this architecture gives us more flexiblity to substitute components which is good for scaling the application.
+- With MVVM approach each class has one responsiblity and there is proper seperation of concern, which conforms to Single Responsiblity Principle.
+- Because of this, the classes will be smaller in size and would become easy to test
+- Also using this architecture gives us more flexiblity to substitute components, which is good for scaling the application.
 - Morover while implementing I enforced the use of Protocols in places to ensures that the classes are open to extension without the need to modify them, conforming to Open-Closed Principle
-- At any point if there is any need to add more functionality we can simply provide a new implementation because of which
-we won't have to change any code that is using that functionality.
+- At any point if there is any need to add more functionality we can simply provide a new implementation because of which we won't have to change any code that is using that functionality.
 
+
+##### Before procedding with implementation I woked out somethings in rough you can view that in `/Notes`( https://github.com/sanketpr/ItemsList-iOS/tree/main/Notes)
 
 #### Structure:
 

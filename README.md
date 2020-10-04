@@ -6,6 +6,8 @@
 ##### LinkedIn: https://www.linkedin.com/in/sanket-kulthe/
 
 
+##### Demo Video: `/Demo.mov` (https://github.com/sanketpr/ItemsList-iOS/blob/main/Demo.mov)
+
 #### Design Choice:
 
 - Initially I tried to approached this task with MVC architecture because

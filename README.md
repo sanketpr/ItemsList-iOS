@@ -30,7 +30,7 @@
 
 #### Structure:
 
-![Class Diagram](https://raw.githubusercontent.com/sanketpr/ItemsList-iOS/main/ClassDiagram.jpg)
+![Class Diagram](https://raw.githubusercontent.com/sanketpr/ItemsList-iOS/main/FetchRewardsiOS.jpg)
 
 ##### `ItemsListViewController`:
 - ItemsListViewController is the entry point to the application. It maintains a UITableView for presenting a list of items

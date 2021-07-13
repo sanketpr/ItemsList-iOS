@@ -1,12 +1,6 @@
-# ItemsList iOS
+# ItemsList iOS Application
 
-##### Submission by:
-##### Name: Sanket Kulthe
-##### Email: sanketpr@buffalo.edu
-##### LinkedIn: https://www.linkedin.com/in/sanket-kulthe/
-
-
-##### Demo Video: `/Demo.mov` (https://github.com/sanketpr/ItemsList-iOS/blob/main/Demo.mov)
+##### Demo Video: `Demo.mov` (https://github.com/sanketpr/ItemsList-iOS/blob/main/Demo.mov)
 
 #### Design Choice:
 
